@@ -149,35 +149,6 @@ module.exports = ({ extensionURL = '', username = 'Unknown', clientID = '', clie
 
   function promptUser() {
     return searchUsersWithSameEmail().then(function transformUsers(users) {
-      
-      /*
-      const baseUser = users.filter(user => user.user_metadata !== undefined)[0];
-      users.forEach(element => {
-        if (element.user_metadata === undefined) {          
-          console.log("Updating user "+ config.endpoints.userApi +'/'+ element.user_id);
-          console.log("Base user metadata:"+baseUser.user_metadata);
-          apiCall({
-              method: 'PATCH',
-              url: config.endpoints.userApi +'/'+element.user_id,
-              headers:  {
-                 Authorization: 'Bearer ' + auth0.accessToken,
-                 'Content-Type': 'application/json',
-                 'Cache-Control': 'no-cache'
-              },
-              json: {
-                "blocked": false,  
-                "phone_number": baseUser.phone_number,  
-                "user_metadata": baseUser.user_metadata,
-                "app_metadata": baseUser.app_metadata,
-                "given_name": baseUser.given_name,
-                "family_name": baseUser.family_name,  
-                "username": baseUser.username,
-              }
-            });          
-        }     
-      });
-      */
-
       return users.filter(function(u) {
         return u.user_id !== user.user_id;
       }).map(function(user) {               

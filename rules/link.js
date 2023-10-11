@@ -150,6 +150,7 @@ module.exports = ({ extensionURL = '', username = 'Unknown', clientID = '', clie
   function promptUser() {
     return searchUsersWithSameEmail().then(function transformUsers(users) {
       
+      /*
       const baseUser = users.filter(user => user.user_metadata !== undefined)[0];
       users.forEach(element => {
         if (element.user_metadata === undefined) {          
@@ -175,7 +176,8 @@ module.exports = ({ extensionURL = '', username = 'Unknown', clientID = '', clie
             });          
         }     
       });
-      
+      */
+
       return users.filter(function(u) {
         return u.user_id !== user.user_id;
       }).map(function(user) {               

@@ -7,10 +7,10 @@
   "description":
     "This extension gives Auth0 customers the ability to allow their users to link their accounts",
   "type": "application",
-  "logoUrl": "https://cdn.auth0.com/extensions/auth0-authz/assets/logo.svg",
+  "logoUrl": "https://raw.githubusercontent.com/aserto-dev/artwork/main/logo/brandmark/color/aserto-brandmark-color.png",
   "docsUrl": "https://auth0.com/docs/extensions/account-link",
   "initialUrlPath": "/login",
-  "repository": "https://github.com/auth0-extensions/auth0-account-link-extension",
+  "repository": "https://github.com/aserto-dev/auth0-account-link-extension",
   "keywords": ["auth0", "extension", "account-link"],
   "secrets": {
     "CUSTOM_CSS": {
